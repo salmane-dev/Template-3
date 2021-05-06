@@ -1,9 +1,6 @@
 import  Scripts from '../components/Scripts'
 
 
-
-
-
 function Footer() {
     return (
 

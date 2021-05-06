@@ -89,6 +89,7 @@ p:last-child {
 
 .navbar-light .navbar-nav .nav-link {
   color: #313131;
+  cursor: pointer;
 }
 
 #tmMainNav .nav-link.current,

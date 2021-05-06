@@ -1,8 +1,30 @@
-import { HashLink } from 'react-router-hash-link';
+import { HashLink as Link } from 'react-router-hash-link'
 import { LinkContainer } from 'react-router-bootstrap' 
+import { useLocation } from 'react-router-dom'
+
+
+
+
 
 
 function Menu() {
+  
+  const location = useLocation()
+  
+  function Linko(props){
+     if(location.pathname==='/'){
+      return <Link className="nav-item active" to={props.rout}>
+                 <span className="nav-link"> {props.text} </span>
+             </Link> 
+    }
+    else{
+      return  <Link className="nav-item active" to={props.rout}>
+                  <span className="nav-link"> {props.text} </span>
+              </Link>
+    }
+  }
+
+
     return (
       <div className="container">
 
@@ -37,40 +59,29 @@ function Menu() {
 
                     <div className="collapse navbar-collapse " id="tmMainNav">
                       <ul className="navbar-nav mx-auto tm-navbar-nav">
+                            
                             <li className="nav-item active">
-                              <HashLink className="nav-item active" to="/#home">
-                                <span className="nav-link">
-                                    Home
-                                </span>
-                              </HashLink>
+                                <Linko rout="/#home" text="Home"/>
+                            </li> 
+
+                            <li className="nav-item active">
+                                  <Linko rout="/#About" text="About us"/>
                             </li>
 
                             <li className="nav-item active">
-                              <LinkContainer  className="nav-item active" to="/#Aboutus">
-                                <a className="nav-link">
-                                    About Us
-                                </a>
+                                  <Linko rout="/#contact" text="Contact"/>
+                              </li>
+
+                            <li className="nav-item active">
+                              <LinkContainer to="/unsubscribe" className="nav-link">
+                                    <span className="nav-link">unsubscribe</span>
                               </LinkContainer>
                             </li>
-
-                        <li className="nav-item active">
-                          <LinkContainer className="nav-item active" to="/#contact">
-                            <a className="nav-link">
-                                Contact
-                            </a>
-                          </LinkContainer>
-                          </li>
-
-                        <li className="nav-item active">
-                          <LinkContainer to="/unsubscribe" className="nav-link">
-                          <span className="nav-link">unsubscribe</span>
-                          </LinkContainer>
-                        </li>
-                        <li className="nav-item active">
-                          <LinkContainer to="/privacy" className="nav-link">
-                          <span className="nav-link">privacy</span>
-                          </LinkContainer> 
-                        </li>
+                            <li className="nav-item active">
+                              <LinkContainer to="/privacy" className="nav-link">
+                                  <span className="nav-link">privacy</span>
+                              </LinkContainer> 
+                            </li>
 
                   </ul>
                 </div>

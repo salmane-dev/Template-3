@@ -1,8 +1,4 @@
 
-
-
-
-
 function Contact() {
     return (
       <section className="container tm-contact-section" >

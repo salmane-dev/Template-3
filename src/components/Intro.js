@@ -1,14 +1,9 @@
 
 
-
-
-
 function Intro() {
     return (
 
-
-
-      <div className="container tm-features-section" id="Aboutus">
+      <div className="container tm-features-section" id="About">
           <div className="row tm-features-row">
             <section className="col-md-6 col-sm-12 tm-feature-block">
               <header className="tm-feature-header">
