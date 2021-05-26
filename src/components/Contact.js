@@ -1,5 +1,47 @@
+import React, { useState } from 'react'
+import axios from 'axios'
+import Forma from '../components/Forma';
+
 
 function Contact() {
+
+
+  const [message, setMessage] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [showingAlert, setShowingAlert] = useState('');
+
+      const handleChange = (e) => {
+        setEmail({ [e.target.name]: e.target.value });
+      };
+
+      const resetForm = () => {
+        setFname('')
+        setLname('')
+        setEmail('')
+        setMessage('')
+      }
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    axios({
+      method: "get",
+      url:"/",
+      data:  {fname,lname,email, message}
+    }).then((response)=>{
+             if (response.status === 200) { 
+              setShowingAlert("Thanks for your message")
+              resetForm()
+            } else if(response.data.status !== 200) {
+              setShowingAlert("Message failed to send.")
+            }
+          })
+        }
+
+
     return (
       <section className="container tm-contact-section" >
             <div className="row">
@@ -13,55 +55,9 @@ function Contact() {
             </div>
         <div className="row justify-content-between mx-4">
           <div className="col-xl-5 col-lg-6 col-md-12 tm-contact-left">
-            <div className="tm-contact-form-container w-100">
-              <form action="index.html" className="tm-contact-form">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="contact_Fname"
-                    name="contact_Fname"
-                    className="form-control"
-                    placeholder="First Name"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="contact_Lname"
-                    name="contact_Lname"
-                    className="form-control"
-                    placeholder="Last Name"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    id="contact_email"
-                    name="contact_email"
-                    className="form-control"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    rows="5"
-                    id="contact_message"
-                    name="contact_message"
-                    className="form-control"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div className="tm text-center">
-                  <button type="submit" className="btn tm-btn tm-btn-big">
-                    Send It
-                  </button>
-                </div>
-              </form>
-            </div>
+            
+            <Forma />
+            
           </div>
           <div className="col-xl-5 col-lg-6 col-md-12 tm-contact-right">
             <div className="tm-contact-figure-block">

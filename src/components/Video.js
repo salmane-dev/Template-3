@@ -9,10 +9,9 @@ function Video() {
                     <div className="row">
                         <div className="col-12">
                         <header>
-                            <h2 className="tm-banner-title">Pro Line Video</h2>
+                            <h2 className="tm-banner-title">Welcome to { window.location.hostname }</h2>
                             <p className="mx-auto tm-banner-subtitle">
-                            The video background has a parallax effect. This is fluid and
-                            full-width.
+
                             </p>
                         </header>
                         </div>

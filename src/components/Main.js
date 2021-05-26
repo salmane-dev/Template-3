@@ -13,9 +13,10 @@ const Main = () => {
   return (   
             <Switch>  
                 <Route path='/unsubscribe' component={Unsubscribe} ></Route>
+                <Route path='/contact'  component={Contact}></Route>
                 <Route path='/privacy' component={Privacy} ></Route>
                 <Route path='/' >
-                    {/* <Video /> */}
+                    <Video />
                     <Intro />
                     <Contact />
                 </Route>

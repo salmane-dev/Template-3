@@ -96,6 +96,7 @@ p:last-child {
 #tmMainNav .nav-link:hover {
   color: #0662b9;
   background: #eaeaea;
+  text-decoration: underline;
 }
 
 .navbar-light .navbar-toggler {
@@ -124,8 +125,7 @@ p:last-child {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
-  margin-top: 74px;
+  overflow: hidden; 
 }
 
 .tm-banner-section video {
@@ -370,6 +370,21 @@ figure {
   margin-top: 27px;
   max-width: 600px;
 }
+
+.tm .delayit{
+  transition: all 5s linear 5s !important; 
+}
+
+.alert-shown {
+  opacity: 1;
+  transition: all 1.5s linear 1.5s;
+}
+
+.alert-hidden {
+  opacity: 0;
+  transition: all 5s linear;
+}
+
 
 .tm-contact-form-container {
   /* max-width: 400px; */

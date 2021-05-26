@@ -31,11 +31,13 @@ function Menu() {
             <div className="container" id="home">
                 <div className="col-12 text-center">
                     <div className="tm-page-header">
-                    <i className="fas fa-4x fa-chart-bar mr-4"></i>
-                    <h1 className="d-inline-block text-uppercase">Pro Line</h1>
+                        <a href="/" className="text-dark">
+                            <i className="fas fa-4x fa-chart-bar mr-4"></i>
+                            <h1 className="d-inline-block text-uppercase"> { window.location.hostname } </h1>
+                        </a>
                     </div>
                 </div>
-            </div> 
+            </div>  
               <div className="tm-nav-section">
                 <div className="container">
                   <div className="row">
@@ -58,7 +60,7 @@ function Menu() {
                         </li> */}
 
                     <div className="collapse navbar-collapse " id="tmMainNav">
-                      <ul className="navbar-nav mx-auto tm-navbar-nav">
+                      <ul className="navbar-nav mx-auto tm-navbar-nav menu">
                             
                             <li className="nav-item active">
                                 <Linko rout="/#home" text="Home"/>

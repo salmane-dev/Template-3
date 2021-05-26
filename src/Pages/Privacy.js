@@ -4,7 +4,7 @@ function Privacy() {
   const titls_classes= "text-3xl font-bold leading-normal text-center lg:text-3xl lg:pt-10"
   const data =  {"header":
                     {
-                      "website":"Template-3.com" 
+                      "website": window.location.hostname
                     }
                 }
 
@@ -22,10 +22,10 @@ function Privacy() {
                   <div className="text-justify">
 
                           <div id="right">
-                <table class="bordegris" cellspacing="0" cellpadding="0"   align="center" border="0">
+                <table class="bordegris" cellSpacing="0" cellpadding="0"   align="center" border="0">
   <tbody>
   <tr>
-    <td valign="top"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <td valign="top"><table cellSpacing="0" cellpadding="0" width="100%" border="0">
       <tbody>
         
         <tr>
@@ -35,7 +35,7 @@ function Privacy() {
     </table></td></tr>
   <tr>
     <td valign="top">
-      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+      <table cellSpacing="0" cellpadding="0" width="100%" border="0">
         <tbody>
         <tr>
           <td valign="top" background="p_archivos/fondo2.jpg" height="200">
@@ -439,7 +439,7 @@ function Privacy() {
                         <br/>
                         For more information about protecting your privacy, you may wish to visit: <a href="http://www.ftc.gov">www.ftc.gov</a>.<br/>
                         <br/>
-                        If you have questions about this policy, please contact us at support@{data.header.website}. </span></p><p class="MsoNormal"><span lang="EN-US" >&nbsp;</span></p><table cellspacing="0" cellpadding="5" width="100%" border="0">
+                        If you have questions about this policy, please contact us at support@{data.header.website}. </span></p><p class="MsoNormal"><span lang="EN-US" >&nbsp;</span></p><table cellSpacing="0" cellpadding="5" width="100%" border="0">
                                       <tbody>
                                       <tr>
 
